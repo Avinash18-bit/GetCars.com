@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('booknow.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        
+        .logo-container {
+            margin-top: -10px;
+            margin-right: 1150px;
+        }
+        
+        .logo {
+            width: 220px;
+            height: auto;
+            filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.5));
+        }
+        
+        .tagline-container {
+            margin-top: -150px;
+        }
+        
+        .tagline {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #ffcc00;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        
+        .web-container {
+            margin-top: 370px;
+            margin-right: 1000px;
+        }
+        
+        .web {
+            font-size: 2rem;
+            font-weight: bold;
+            color: black;
+        }
+        
+        .contact-container {
+            margin-left: 1000px;
+        }
+        
+        .contact {
+            margin-top: -80px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+        
+        .number-container {
+            margin-left: 1000px;
+        }
+        
+        .number {
+            margin-top: -50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+        }
+        /* Discount Box - FIXED POSITION */
+        
+        .discount-container {
+            position: relative;
+            margin-top: -600px;
+            width: 200px;
+            margin-left: 1000px;
+            background: red;
+            padding: 10px 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+            animation: blink 1s infinite alternate;
+        }
+        
+        .discount {
+            font-size: 1rem;
+            font-weight: bold;
+            color: white;
+        }
+        
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.7;
+            }
+        }
+        /* Book Now Button */
+        
+        .book-now-container {
+            margin-top: 200px;
+            margin-left: 600px;
+        }
+        
+        .book-now {
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding: 15px 30px;
+            background: #ffcc00;
+            color: black;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .book-now:hover {
+            background: whitesmoke;
+            transform: scale(1.05);
+        }
+        
+        .book-now:active {
+            transform: scale(0.95);
+        }
+        
+        .book-now {
+            font-size: 1.5rem;
+            padding: 10px 20px;
+        }
+        /* Thank You Message with Black Box */
+        
+        #thank-you-message {
+            display: none;
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ffcc00;
+            background: rgba(0, 0, 0, 0.699);
+            padding: 15px 30px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo Section -->
+    <div class="logo-container">
+        <img src="carlogo-removebg-preview.png" alt="Logo" class="logo">
+    </div>
+
+    <!-- Tagline Section -->
+    <div class="tagline-container">
+        <p class="tagline">DON'T DREAM IT, DRIVE IT !</p>
+    </div>
+
+    <!-- Web section -->
+    <div class="web-container">
+        <p class="web">www.GetCars.com</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <p class="contact">More Info Call Us</p>
+    </div>
+
+    <!--number-->
+    <div class="number-container">
+        <p class="number">+91 808 808 1807</p>
+    </div>
+
+    <!-- Discount Section -->
+    <div class="discount-container">
+        <p class="discount">🔥 Hurryup! There is 20% DISCOUNT 🔥</p>
+    </div>
+
+    <!-- Book Now Button -->
+    <div class="book-now-container">
+        <button class="book-now" onclick="celebrate()">BOOK NOW</button>
+    </div>
+    <!-- Thank You Message -->
+    <p id="thank-you-message">🎉 Thank you for booking! 🎉</p>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script>
+        function celebrate() {
+            // 🎉 Confetti Animation
+            confetti({
+                particleCount: 1500,
+                spread: 120,
+                origin: {
+                    y: 0.6
+                }
+            });
+
+            // 🎊 Show Thank You Message
+            setTimeout(() => {
+                document.getElementById("thank-you-message").style.display = "block";
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
