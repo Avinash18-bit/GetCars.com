@@ -1,0 +1,181 @@
+<!-- Background Image -->
+<img src="find cars special for you.png" class="centreImage">
+
+<!--select category -->
+<select class="category-select">
+    <option selected disabled>SELECT CATEGORY</option>
+    <option value="SUV">SUV</option>
+    <option value="Sedan">Sport</option>
+    <option value="Truck">EV</option>
+    
+  </select>
+
+<style>
+    .category-select {
+        padding: 12px;
+        margin-top: -398px;
+        margin-left: 86px;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: white;
+        cursor: pointer;
+        width: 192px;
+    }
+    
+    .category-select:hover {
+        background-color: orange;
+        color: white;
+    }
+</style>
+
+<!-- Enter Address -->
+
+<div class="input-container">
+    <input type="text" placeholder="Enter Address" class="input-box">
+</div>
+
+<style>
+    .input-container {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        width: 185px;
+        margin-top: -399px;
+        margin-left: 318px;
+        font-size: auto;
+        font-weight: bold;
+        text-transform: uppercase;
+        /* Adjust width */
+    }
+    
+    .input-box {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+    }
+    
+    .search-btn {
+        background-color: orange;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .search-btn .icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .search-btn:hover {
+        background-color: darkorange;
+    }
+</style>
+
+<!-- Select Mode -->
+<select class="mode-select">
+    <option selected disabled>SELECT MODE</option>
+    <option value="Automatic">Automatic</option>
+    <option value="Manual">Manual</option>
+    <option value="CVT">CVT</option>
+    <option value="Dual-Clutch">Dual-Clutch</option>
+</select>
+
+<style>
+    /* Mode Select Button */
+    
+    .mode-select {
+        position: absolute;
+        margin-top: -38px;
+        margin-left: 544;
+        padding: 12px;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: white;
+        cursor: pointer;
+        width: 192px;
+    }
+    
+    .mode-select:hover {
+        background-color: orange;
+        color: white;
+    }
+</style>
+
+<!-- Select Model Year -->
+<select class="model-year-select">
+    <option selected disabled>SELECT MODEL YEAR</option>
+    <option value="2025">2025</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+    <option value="2019">2019</option>
+</select>
+
+<style>
+    /* Model Year Select Button */
+    
+    .model-year-select {
+        position: absolute;
+        margin-top: -37px;
+        margin-left: 770px;
+        padding: 12px;
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: white;
+        cursor: pointer;
+        width: 192px;
+    }
+    
+    .model-year-select:hover {
+        background-color: orange;
+        color: white;
+    }
+</style>
+
+<!-- Search Button -->
+<button class="search-btn" onclick="goToNextPage()">SEARCH</button>
+
+<script>
+    function goToNextPage() {
+        window.location.href = "find parts for your vehicle";
+    }
+</script>
+
+<style>
+    /* Search Button Styling */
+    
+    .search-btn {
+        position: absolute;
+        margin-top: -37;
+        margin-left: 1000px;
+        padding: 13px 26px;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        background-color: green;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+        width: 220px;
+    }
+    
+    .search-btn:hover {
+        background-color: darkgreen;
+    }
+</style>
+
+<script>
+    function goToNextPage() {
+        window.location.href = "select colour.html";
+    }
+</script>
